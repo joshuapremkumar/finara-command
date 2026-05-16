@@ -9,38 +9,141 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as AppRouteImport } from './routes/_app'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AppTreasuryRouteImport } from './routes/_app.treasury'
+import { Route as AppTradeFinanceRouteImport } from './routes/_app.trade-finance'
+import { Route as AppSuppliersRouteImport } from './routes/_app.suppliers'
+import { Route as AppPaymentsRouteImport } from './routes/_app.payments'
+import { Route as AppDashboardRouteImport } from './routes/_app.dashboard'
+import { Route as AppCopilotRouteImport } from './routes/_app.copilot'
+import { Route as AppComplianceRouteImport } from './routes/_app.compliance'
 
+const AppRoute = AppRouteImport.update({
+  id: '/_app',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppTreasuryRoute = AppTreasuryRouteImport.update({
+  id: '/treasury',
+  path: '/treasury',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppTradeFinanceRoute = AppTradeFinanceRouteImport.update({
+  id: '/trade-finance',
+  path: '/trade-finance',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSuppliersRoute = AppSuppliersRouteImport.update({
+  id: '/suppliers',
+  path: '/suppliers',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppPaymentsRoute = AppPaymentsRouteImport.update({
+  id: '/payments',
+  path: '/payments',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppDashboardRoute = AppDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppCopilotRoute = AppCopilotRouteImport.update({
+  id: '/copilot',
+  path: '/copilot',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppComplianceRoute = AppComplianceRouteImport.update({
+  id: '/compliance',
+  path: '/compliance',
+  getParentRoute: () => AppRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/compliance': typeof AppComplianceRoute
+  '/copilot': typeof AppCopilotRoute
+  '/dashboard': typeof AppDashboardRoute
+  '/payments': typeof AppPaymentsRoute
+  '/suppliers': typeof AppSuppliersRoute
+  '/trade-finance': typeof AppTradeFinanceRoute
+  '/treasury': typeof AppTreasuryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/compliance': typeof AppComplianceRoute
+  '/copilot': typeof AppCopilotRoute
+  '/dashboard': typeof AppDashboardRoute
+  '/payments': typeof AppPaymentsRoute
+  '/suppliers': typeof AppSuppliersRoute
+  '/trade-finance': typeof AppTradeFinanceRoute
+  '/treasury': typeof AppTreasuryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_app': typeof AppRouteWithChildren
+  '/_app/compliance': typeof AppComplianceRoute
+  '/_app/copilot': typeof AppCopilotRoute
+  '/_app/dashboard': typeof AppDashboardRoute
+  '/_app/payments': typeof AppPaymentsRoute
+  '/_app/suppliers': typeof AppSuppliersRoute
+  '/_app/trade-finance': typeof AppTradeFinanceRoute
+  '/_app/treasury': typeof AppTreasuryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/compliance'
+    | '/copilot'
+    | '/dashboard'
+    | '/payments'
+    | '/suppliers'
+    | '/trade-finance'
+    | '/treasury'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/compliance'
+    | '/copilot'
+    | '/dashboard'
+    | '/payments'
+    | '/suppliers'
+    | '/trade-finance'
+    | '/treasury'
+  id:
+    | '__root__'
+    | '/'
+    | '/_app'
+    | '/_app/compliance'
+    | '/_app/copilot'
+    | '/_app/dashboard'
+    | '/_app/payments'
+    | '/_app/suppliers'
+    | '/_app/trade-finance'
+    | '/_app/treasury'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AppRoute: typeof AppRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/_app': {
+      id: '/_app'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,12 +151,94 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_app/treasury': {
+      id: '/_app/treasury'
+      path: '/treasury'
+      fullPath: '/treasury'
+      preLoaderRoute: typeof AppTreasuryRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/trade-finance': {
+      id: '/_app/trade-finance'
+      path: '/trade-finance'
+      fullPath: '/trade-finance'
+      preLoaderRoute: typeof AppTradeFinanceRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/suppliers': {
+      id: '/_app/suppliers'
+      path: '/suppliers'
+      fullPath: '/suppliers'
+      preLoaderRoute: typeof AppSuppliersRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/payments': {
+      id: '/_app/payments'
+      path: '/payments'
+      fullPath: '/payments'
+      preLoaderRoute: typeof AppPaymentsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/dashboard': {
+      id: '/_app/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof AppDashboardRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/copilot': {
+      id: '/_app/copilot'
+      path: '/copilot'
+      fullPath: '/copilot'
+      preLoaderRoute: typeof AppCopilotRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/compliance': {
+      id: '/_app/compliance'
+      path: '/compliance'
+      fullPath: '/compliance'
+      preLoaderRoute: typeof AppComplianceRouteImport
+      parentRoute: typeof AppRoute
+    }
   }
 }
 
+interface AppRouteChildren {
+  AppComplianceRoute: typeof AppComplianceRoute
+  AppCopilotRoute: typeof AppCopilotRoute
+  AppDashboardRoute: typeof AppDashboardRoute
+  AppPaymentsRoute: typeof AppPaymentsRoute
+  AppSuppliersRoute: typeof AppSuppliersRoute
+  AppTradeFinanceRoute: typeof AppTradeFinanceRoute
+  AppTreasuryRoute: typeof AppTreasuryRoute
+}
+
+const AppRouteChildren: AppRouteChildren = {
+  AppComplianceRoute: AppComplianceRoute,
+  AppCopilotRoute: AppCopilotRoute,
+  AppDashboardRoute: AppDashboardRoute,
+  AppPaymentsRoute: AppPaymentsRoute,
+  AppSuppliersRoute: AppSuppliersRoute,
+  AppTradeFinanceRoute: AppTradeFinanceRoute,
+  AppTreasuryRoute: AppTreasuryRoute,
+}
+
+const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AppRoute: AppRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
