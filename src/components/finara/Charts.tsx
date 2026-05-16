@@ -36,7 +36,7 @@ export function CashFlowChart({ data }: { data: { date: string; inflow: number; 
         <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" vertical={false} />
         <XAxis dataKey="date" stroke="var(--color-muted-foreground)" fontSize={11} tickLine={false} axisLine={false} interval={9} />
         <YAxis stroke="var(--color-muted-foreground)" fontSize={11} tickLine={false} axisLine={false} tickFormatter={(v) => `${(v / 1_000_000).toFixed(1)}M`} />
-        <Tooltip contentStyle={tooltipStyle} formatter={(v: number) => new Intl.NumberFormat("en-US").format(v)} />
+        <Tooltip contentStyle={tooltipStyle} formatter={(v) => new Intl.NumberFormat("en-US").format(Number(v))} />
         <Area type="monotone" dataKey="inflow" stroke="var(--color-chart-2)" strokeWidth={2} fill="url(#inflow)" />
         <Area type="monotone" dataKey="outflow" stroke="var(--color-chart-1)" strokeWidth={2} fill="url(#outflow)" />
       </AreaChart>
@@ -63,7 +63,7 @@ export function AllocationDonut({ data }: { data: { name: string; value: number 
                 <Cell key={i} fill={colors[i % colors.length]} />
               ))}
             </Pie>
-            <Tooltip contentStyle={tooltipStyle} formatter={(v: number) => new Intl.NumberFormat("en-US").format(v)} />
+            <Tooltip contentStyle={tooltipStyle} formatter={(v) => new Intl.NumberFormat("en-US").format(Number(v))} />
           </PieChart>
         </ResponsiveContainer>
         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
