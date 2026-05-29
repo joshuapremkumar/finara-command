@@ -5,9 +5,9 @@ import { ArrowRight, Banknote, Bot, CheckCircle2, CreditCard, Globe2, Layers, Lo
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Finara OS — The Financial Operating System for Modern SMEs" },
+      { title: "Stable Pay — The Financial Operating System for Modern SMEs" },
       { name: "description", content: "Payments, treasury, supplier management, trade finance, and an AI CFO Copilot — unified in one corporate financial operating system." },
-      { property: "og:title", content: "Finara OS — Financial OS for Modern SMEs" },
+      { property: "og:title", content: "Stable Pay — Financial OS for Modern SMEs" },
       { property: "og:description", content: "Smarter Treasury. Faster Settlement. Payments, treasury, and trade — unified." },
     ],
   }),
@@ -36,9 +36,9 @@ function Nav() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center gap-8">
         <Link to="/" className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-md bg-gradient-to-br from-primary to-electric grid place-items-center">
-            <span className="font-display font-bold text-primary-foreground">F</span>
+            <span className="font-display font-bold text-primary-foreground">S</span>
           </div>
-          <span className="font-display font-semibold tracking-tight">Finara OS</span>
+          <span className="font-display font-semibold tracking-tight">Stable Pay</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm text-muted-foreground">
           <a href="#pillars" className="hover:text-foreground">Platform</a>
@@ -127,7 +127,7 @@ function Pillars() {
         <div className="max-w-2xl mb-12">
           <div className="text-xs uppercase tracking-widest text-electric font-medium">Platform</div>
           <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mt-3">One operating system. Every corporate finance workflow.</h2>
-          <p className="text-muted-foreground mt-4">No more stitched-together banking, accounting, and treasury tools. Finara OS replaces the patchwork with a single ledger and a single workflow.</p>
+          <p className="text-muted-foreground mt-4">No more stitched-together banking, accounting, and treasury tools. Stable Pay replaces the patchwork with a single ledger and a single workflow.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-xl overflow-hidden border border-border">
           {items.map((it) => (
@@ -184,7 +184,7 @@ function Architecture() {
           </div>
           <div className="my-4 flex items-center gap-2"><div className="flex-1 h-px bg-border" /><Layers className="h-4 w-4 text-muted-foreground" /><div className="flex-1 h-px bg-border" /></div>
           <div className="rounded-lg border border-primary/30 bg-primary/5 p-4 text-center">
-            <div className="text-[11px] uppercase tracking-widest text-primary font-medium">Finara Unified Ledger</div>
+            <div className="text-[11px] uppercase tracking-widest text-primary font-medium">Stable Pay Unified Ledger</div>
             <div className="text-xs text-muted-foreground mt-1">Double-entry · Multi-currency · Multi-entity</div>
           </div>
           <div className="my-4 flex items-center gap-2"><div className="flex-1 h-px bg-border" /><Globe2 className="h-4 w-4 text-muted-foreground" /><div className="flex-1 h-px bg-border" /></div>
@@ -278,9 +278,9 @@ function Footer() {
     <footer className="py-12">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div className="flex items-center gap-2">
-          <div className="h-7 w-7 rounded-md bg-gradient-to-br from-primary to-electric grid place-items-center"><span className="font-display font-bold text-primary-foreground text-xs">F</span></div>
-          <span className="font-display font-semibold">Finara OS</span>
-          <span className="text-xs text-muted-foreground ml-2">© 2026 Finara Holdings FZ-LLC</span>
+          <div className="h-7 w-7 rounded-md bg-gradient-to-br from-primary to-electric grid place-items-center"><span className="font-display font-bold text-primary-foreground text-xs">S</span></div>
+          <span className="font-display font-semibold">Stable Pay</span>
+          <span className="text-xs text-muted-foreground ml-2">© 2026 Stable Pay Holdings FZ-LLC</span>
         </div>
         <div className="flex items-center gap-6 text-xs text-muted-foreground">
           <a href="#" className="hover:text-foreground">Privacy</a>
