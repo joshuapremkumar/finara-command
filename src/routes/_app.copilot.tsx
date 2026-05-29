@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Sparkles, Send, TrendingUp, ShieldAlert, AlertTriangle, ArrowRightLeft } from "lucide-react";
 
 export const Route = createFileRoute("/_app/copilot")({
-  head: () => ({ meta: [{ title: "AI CFO Copilot · Finara OS" }] }),
+  head: () => ({ meta: [{ title: "AI CFO Copilot · Stable Pay" }] }),
   component: Copilot,
 });
 

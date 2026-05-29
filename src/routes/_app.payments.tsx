@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CreditCard, QrCode, Link2, RefreshCcw, Plus, Download, BarChart3, Wallet } from "lucide-react";
 
 export const Route = createFileRoute("/_app/payments")({
-  head: () => ({ meta: [{ title: "Merchant Payments · Finara OS" }] }),
+  head: () => ({ meta: [{ title: "Merchant Payments · Stable Pay" }] }),
   component: Payments,
 });
 
@@ -57,7 +57,7 @@ function Payments() {
                     <tr key={p.id} className="border-b border-border/60 hover:bg-surface-elevated">
                       <td className="px-5 py-3">
                         <div className="font-medium">{p.name}</div>
-                        <div className="text-[11px] text-muted-foreground">pay.finara.os/{p.id.toLowerCase()}</div>
+                        <div className="text-[11px] text-muted-foreground">pay.stablepay.io/{p.id.toLowerCase()}</div>
                       </td>
                       <td className="px-3 py-3 text-right tabular font-medium">{formatMoney(p.amount, p.currency)}</td>
                       <td className="px-3 py-3 text-right tabular text-muted-foreground">{p.clicks}</td>

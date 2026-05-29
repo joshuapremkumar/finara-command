@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Upload, Plus, Users, Clock, Wallet, AlertTriangle, Check } from "lucide-react";
 
 export const Route = createFileRoute("/_app/suppliers")({
-  head: () => ({ meta: [{ title: "Suppliers & Accounts Payable · Finara OS" }] }),
+  head: () => ({ meta: [{ title: "Suppliers & Accounts Payable · Stable Pay" }] }),
   component: Suppliers,
 });
 
