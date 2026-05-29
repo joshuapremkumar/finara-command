@@ -56,11 +56,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <aside className="hidden md:flex w-64 shrink-0 flex-col border-r border-sidebar-border bg-sidebar text-sidebar-foreground">
         <div className="h-16 flex items-center gap-2 px-5 border-b border-sidebar-border">
           <div className="h-8 w-8 rounded-md bg-gradient-to-br from-primary to-electric grid place-items-center">
-            <span className="font-display font-bold text-primary-foreground">F</span>
+            <span className="font-display font-bold text-primary-foreground">S</span>
           </div>
           <div className="leading-tight">
-            <div className="font-display text-sm font-semibold tracking-tight">Finara OS</div>
-            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Financial OS</div>
+            <div className="font-display text-sm font-semibold tracking-tight">Stable Pay</div>
+            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Stable Pay OS</div>
           </div>
         </div>
 
@@ -110,7 +110,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               </SheetTrigger>
               <SheetContent side="left" className="bg-sidebar text-sidebar-foreground p-0 w-64">
                 <SheetHeader className="h-16 px-5 border-b border-sidebar-border flex-row items-center">
-                  <SheetTitle className="font-display">Finara OS</SheetTitle>
+                  <SheetTitle className="font-display">Stable Pay</SheetTitle>
                 </SheetHeader>
                 <nav className="p-2 space-y-0.5">
                   {nav.map((item) => (
@@ -129,7 +129,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           </div>
 
           <div className="hidden md:flex items-center gap-2 text-xs text-muted-foreground">
-            <span className="font-medium text-foreground">Finara Holdings FZ-LLC</span>
+            <span className="font-medium text-foreground">Stable Pay Holdings FZ-LLC</span>
             <ChevronDown className="h-3 w-3" />
             <Badge variant="outline" className="border-success/40 text-success bg-success/10 text-[10px]">LIVE</Badge>
           </div>
