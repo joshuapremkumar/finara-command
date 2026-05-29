@@ -156,7 +156,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     LH
                   </div>
                   <div className="leading-tight text-left hidden sm:block">
-                    <div className="text-xs font-medium">Layla Haddad</div>
+                    <div className="text-xs font-medium">Stable Pay User</div>
                     <div className="text-[10px] text-muted-foreground">{role}</div>
                   </div>
                   <ChevronDown className="h-3 w-3 text-muted-foreground" />
