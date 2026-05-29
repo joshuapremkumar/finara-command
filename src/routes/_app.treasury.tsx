@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRightLeft, TrendingUp, Wallet, Coins, DollarSign } from "lucide-react";
 
 export const Route = createFileRoute("/_app/treasury")({
-  head: () => ({ meta: [{ title: "Treasury & Financial Ops · Finara OS" }] }),
+  head: () => ({ meta: [{ title: "Treasury & Financial Ops · Stable Pay" }] }),
   component: Treasury,
 });
 

@@ -14,7 +14,7 @@ import { Banknote, Coins, TrendingUp, Wallet, FileText, ShieldAlert, Send, Spark
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/_app/dashboard")({
-  head: () => ({ meta: [{ title: "Executive Dashboard · Finara OS" }] }),
+  head: () => ({ meta: [{ title: "Executive Dashboard · Stable Pay" }] }),
   component: Dashboard,
 });
 
@@ -22,7 +22,7 @@ function Dashboard() {
   return (
     <div className="p-6 md:p-8 max-w-[1600px] mx-auto">
       <PageHeader
-        title="Good morning, Layla"
+        title="Good morning, Stable Pay User"
         description="Here's a unified view of treasury, payables, and merchant operations across all entities."
         actions={
           <>

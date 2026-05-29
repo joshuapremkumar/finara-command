@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ShieldCheck, AlertTriangle, FileCheck, Download, Lock } from "lucide-react";
 
 export const Route = createFileRoute("/_app/compliance")({
-  head: () => ({ meta: [{ title: "Compliance & Audit · Finara OS" }] }),
+  head: () => ({ meta: [{ title: "Compliance & Audit · Stable Pay" }] }),
   component: Compliance,
 });
 

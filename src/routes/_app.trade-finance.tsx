@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Ship, FileSignature, TrendingUp, Anchor, Plus, Check } from "lucide-react";
 
 export const Route = createFileRoute("/_app/trade-finance")({
-  head: () => ({ meta: [{ title: "Trade Finance · Finara OS" }] }),
+  head: () => ({ meta: [{ title: "Trade Finance · Stable Pay" }] }),
   component: TradeFinance,
 });
 
