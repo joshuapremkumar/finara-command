@@ -72,9 +72,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Finara OS — Financial OS for Modern SMEs" },
+      { title: "Stable Pay — Financial OS for Modern SMEs" },
       { name: "description", content: "Payments, treasury, supplier management, trade finance, and AI CFO — unified." },
-      { property: "og:title", content: "Finara OS — Financial OS for Modern SMEs" },
+      { property: "og:title", content: "Stable Pay — Financial OS for Modern SMEs" },
       { property: "og:description", content: "Smarter Treasury. Faster Settlement." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
